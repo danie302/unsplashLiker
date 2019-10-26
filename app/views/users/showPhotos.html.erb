@@ -1,0 +1,13 @@
+
+<div class="card container">
+  <div class="card-header container--header">
+    Hello <%= @user.name %> lets find some pictures for you.
+  </div>
+    <%= image_tag(@photos[:urls][:raw], {:class => 'container--image'})  %>
+    <div class="card-body container--btns">
+      <%= form_for :user, url: nextPhoto_url do |f| %>
+        <%= f.submit('next', {:class => 'btn btn-danger container--btns--1'}) %>
+        <%= f.submit('like', {:class => 'btn btn-success container--btns--2'}) %>
+      <% end %>
+    </div>
+</div>

@@ -1,8 +1,11 @@
 <div class="container">
-    <%= @title%>
-    <form accept-charset="UTF-8" action="/userEntry" data-remote="true" method="post" >
-        <label for="user" class="container--title">Enter your name to save your likes and view pictures</label>
-        <input id="user" name="user" type="text" placeholder="Enter your name" class="container--input"/>
-        <input name="commit" type="submit" value="Search" data-disable-with="Search" />
-    </form>
+    <%= form_for :user, url: userEntry_url do |f| %>
+        <p>
+            <%= f.label :name %><br>
+            <%= f.text_field(:name, {:class => 'form-control'}) %>
+        </p>
+        <p>
+            <%= f.submit({:class => 'btn btn-primary'}) %>
+        </p>
+    <% end %>
 </div>
