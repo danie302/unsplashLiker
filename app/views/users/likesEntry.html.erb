@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container-fluid box">
     <div class="row">
         <% @photos.each do |p| %>
-            <%= image_tag(Unsplash::Photo.find(p[:photo_id])[:urls][:raw], {:class => 'container--image img-fluid col-sm'})  %>
+            <%= image_tag(Unsplash::Photo.find(p[:photo_id])[:urls][:raw], {:class => 'container--image img-fluid col-sm-2'})  %>
         <% end %>
     </div>
 </div>

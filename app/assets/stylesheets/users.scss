@@ -45,8 +45,21 @@ body {
     border-radius: 20px;
     border-style: solid;
     border-color: black;
+    &--main {
+      margin-left: 10%;
+      margin-top: 2%;
+      width: 80%;
+      height: 30vw;
+      border-radius: 20px;
+      border-style: solid;
+      border-color: black;
+    }
   }
   &--photos {
     display: flex;
   }
+}
+
+.box {
+  margin: 2%;
 }
