@@ -12,8 +12,6 @@ RSpec.describe Like, type: :model do
       User.new(name: "tester").save
       user = User.find_by_name("tester")
       like = user.likes.create(photo_id: "azcww2d")
-      puts "-----------------"
-      puts like[:user_id]
       expect(like[:user_id]).to eq(user[:id])
     end
   end

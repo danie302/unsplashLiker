@@ -56,7 +56,11 @@ class UsersController < ApplicationController
 
     def likesEntry
         @user = User.find_by_name(params[:name])
-        @photos = Like.where(user_id: @user.id)
+        if @user
+            @photos = Like.where(user_id: @user.id)
+        else
+            redirect_to :action => "index", name: params[:name]
+        end
     end
     
     private def post_params
