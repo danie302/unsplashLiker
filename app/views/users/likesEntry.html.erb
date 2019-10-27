@@ -1,0 +1,3 @@
+<% @photos.each do |p| %>
+    <%= image_tag(Unsplash::Photo.find(p[:photo_id])[:urls][:raw], {:class => 'container--image'})  %>
+<% end %>

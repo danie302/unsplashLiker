@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get 'photos' => 'users#showPhotos'
   post 'nextPhoto' => 'users#nextPhoto'
   post 'userEntry' => 'users#entry'
+  get 'likes' => 'users#indexPhotos', as: 'like'
+  post 'userLikePhotos' => 'users#likePhotos'
+  get 'userLikesEntry' => 'users#likesEntry'
 end

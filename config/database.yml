@@ -55,8 +55,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: unsplash_liker_test
-
+  database: d2mo9ap8r9jhq
+  username: yintktssunghge
+  password: ccfbe8f1cba0cd053c8ad2e772d83d87f8d60c43823b78641e79af16b65320ed
+  host: ec2-54-83-55-122.compute-1.amazonaws.com
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.

@@ -40,6 +40,24 @@ class UsersController < ApplicationController
             render plain: "ERROR"
         end
     end
+
+    def indexPhotos
+    end
+
+    def likePhotos
+        @user = User.find_by_name(params[:user][:name])
+        if @user
+            puts "Redirect to likesEntry"
+            redirect_to :action => "likesEntry", name: params[:user][:name]
+        else
+            redirect_to :action => "index", name: params[:user][:name]
+        end
+    end
+
+    def likesEntry
+        @user = User.find_by_name(params[:name])
+        @photos = Like.where(user_id: @user.id)
+    end
     
     private def post_params
         params.require(:user).permit(:name)
