@@ -1,11 +1,11 @@
 <div class='container'>
     <%= form_for :user, url: userLikePhotos_url do |f| %>
         <p>
-            <%= f.label :name %><br>
-            <%= f.text_field(:name, {:class => 'form-control'}) %>
+            <%= f.label("Enter your name to view your like photos", {:class => 'container--title'}) %><br>
+            <%= f.text_field(:name, {:class => 'form-control container--form'}) %>
         </p>
         <p>
-            <%= f.submit('Search like photos',{:class => 'btn btn-primary'}) %>
+            <%= f.submit('Search like photos',{:class => 'btn btn-primary container--btns--0'}) %>
         </p>
     <% end %>
 </div>

@@ -9,12 +9,30 @@ body {
   align-content: center;
   position: relative;
   width: 80vw;
+  &--title {
+    font-size: 1.6vw;
+    position: absolute;
+    left: 31%;
+    top: 110%;
+  }
+  &--form {
+    width: 30vw;
+    position: absolute;
+    left: 30%;
+    top: 290%;
+  }
   &--header {
+    text-align: center;
     border-radius: 20px;
     border-style: solid;
     border-color: #f5f5f5;
   }
   &--btns {
+    &--0 {
+      position: absolute;
+      left: 43%;
+      top: 498%;
+    }
     &--1 {
       margin-left: 30%;
     }
@@ -23,12 +41,12 @@ body {
     }
   }
   &--image {
-    width: 80%;
-    height: 30vw;
-    margin-left: 10%;
-    margin-top: 2%;
+    margin: 1%;
     border-radius: 20px;
     border-style: solid;
     border-color: black;
+  }
+  &--photos {
+    display: flex;
   }
 }
