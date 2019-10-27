@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: unsplash_liker_production
-  username: unsplash_liker
+  host: ec2-54-83-55-122.compute-1.amazonaws.com
+  database: d1cc6161n7npqg
+  username: getaurlexmeurg
   password: <%= ENV['UNSPLASH_LIKER_DATABASE_PASSWORD'] %>
